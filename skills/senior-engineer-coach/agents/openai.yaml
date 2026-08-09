@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior Engineer Coach"
+  short_description: "Build senior engineering design judgment"
+  default_prompt: "Use $senior-engineer-coach to guide this project through the full senior engineer design flow and explain each design choice."
