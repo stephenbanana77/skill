@@ -6,6 +6,29 @@ These skills are designed for one purpose: make an agent think like a strong eng
 
 ## Skills
 
+### `senior-engineer-coach`
+
+Senior/Staff Engineer style coaching for turning vague project ideas into complete engineering designs.
+
+Use it when you want an agent to:
+
+- guide a project from idea to engineering design before coding
+- explain each design step in plain language
+- define success criteria, requirements, business flow, and boundaries
+- design features, non-functional requirements, architecture, APIs, and data models
+- reason about tools, services, risks, security, testing, deployment, and observability
+- help a developer move from vibe coding toward real engineering judgment
+
+Best prompts:
+
+```text
+Use senior-engineer-coach to guide this project through the full engineering design flow.
+```
+
+```text
+Use senior-engineer-coach to help me design this AI project step by step and explain why each choice makes sense.
+```
+
 ### `engineering-thinking`
 
 Staff Engineer style software design before implementation.
@@ -60,11 +83,16 @@ Use ai-product-engineer to review this RAG/agent design for production risks.
 - Treat evaluation as part of the product.
 - Match design depth to risk: tiny changes should not become ceremony.
 - Make important engineering decisions explicit and reviewable.
+- Explain design choices in plain language so the user can learn and defend them.
 
 ## Repository Structure
 
 ```text
 skills/
+├── senior-engineer-coach/
+│   ├── SKILL.md
+│   └── agents/
+│       └── openai.yaml
 ├── engineering-thinking/
 │   ├── SKILL.md
 │   └── references/
@@ -106,6 +134,12 @@ If `CODEX_HOME` is not set, use your local Codex skills directory.
 
 ## Example Workflow
 
+For learning senior engineering design judgment:
+
+```text
+Use senior-engineer-coach to guide my project from idea to engineering design.
+```
+
 For a normal software feature:
 
 ```text
@@ -121,8 +155,9 @@ Use ai-product-engineer to design an AI knowledge base assistant with citations 
 For a combined workflow:
 
 ```text
-First use ai-product-engineer to decide whether the feature needs AI.
-Then use engineering-thinking to design the system implementation.
+First use senior-engineer-coach to structure the full project design.
+Then use ai-product-engineer for AI-specific product and model decisions.
+Finally use engineering-thinking to plan the implementation details.
 ```
 
 ## Why This Exists
@@ -135,5 +170,6 @@ Most AI coding workflows fail for boring reasons:
 - missing tests
 - unmeasured AI quality
 - expensive or unsafe AI architecture
+- no step-by-step engineering design before coding
 
 This library turns those concerns into reusable agent behavior.
