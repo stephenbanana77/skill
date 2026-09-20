@@ -75,6 +75,29 @@ Use ai-product-engineer to decide how this AI feature should work.
 Use ai-product-engineer to review this RAG/agent design for production risks.
 ```
 
+### `algo-learn-coach`
+
+Line-by-line coaching for learning Python and algorithms from a real problem.
+
+Use it when you want an agent to:
+
+- start from a concrete scenario instead of an abstract problem statement
+- write one line of code at a time and stop for your answer
+- label each token as a Python keyword, builtin, or programmer-chosen name
+- trace execution by hand before running anything
+- force a naive solution to hurt before introducing the optimized one
+- connect the pattern to LeetCode variants, real systems, and interview framing
+
+Best prompts:
+
+```text
+Use algo-learn-coach to teach me two sum from a real problem, one line at a time.
+```
+
+```text
+Use algo-learn-coach to walk me through sliding window without giving me the full code.
+```
+
 ## Design Principles
 
 - Prefer simple deterministic software before AI.
@@ -93,6 +116,14 @@ skills/
 │   ├── SKILL.md
 │   └── agents/
 │       └── openai.yaml
+├── algo-learn-coach/
+│   ├── SKILL.md
+│   ├── agents/
+│   │   └── openai.yaml
+│   └── references/
+│       ├── 学习记录.md
+│       ├── 算法进阶.md
+│       └── 逐句教学.md
 ├── engineering-thinking/
 │   ├── SKILL.md
 │   └── references/
@@ -138,6 +169,12 @@ For learning senior engineering design judgment:
 
 ```text
 Use senior-engineer-coach to guide my project from idea to engineering design.
+```
+
+For learning Python and algorithms hands-on:
+
+```text
+Use algo-learn-coach to teach me two sum step by step.
 ```
 
 For a normal software feature:

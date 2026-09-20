@@ -1,0 +1,7 @@
+interface:
+  display_name: "算法逐句陪练"
+  short_description: "真实问题驱动，逐句写代码学算法"
+  default_prompt: "用 $algo-learn-coach 带我从一个真实问题开始学，逐句写代码，别直接给完整答案。"
+
+policy:
+  allow_implicit_invocation: true
